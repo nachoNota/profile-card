@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+:root{
+    --Darkcyan: hsl(185, 75%, 39%);
+    --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+    --Darkgrayishblue: hsl(227, 10%, 46%);
+    --Darkgray: hsl(0, 0%, 59%);
+}
+
+body{
+    background-color: var(--Darkcyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-position: fixed;
+    background-image: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: -8vw -58vh, 53vw 50vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 1em;
+    margin-bottom: 2em;
+    height: 365px;
+}
+
+.top-card svg{
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+img{
+    position: relative;
+    bottom: 58px;
+    border-radius: 100%;
+    border: 6px solid whitesmoke;
+}
+
+.text{
+    width: 100%;    
+    text-align: center;
+    color: var(--Verydarkdesaturatedblue);
+    position: relative;
+    bottom: 40px;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    border-top: 0.1em solid rgb(230, 226, 226);
+    margin-top: 1.5em;
+    padding-top: 1.2em;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+}
+
+.info p:nth-child(2), .location, .stats p{
+    color: var(--Darkgrayishblue);
+}
+
+.stats p{
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 0.5em;
+}
+
+.info p:nth-child(2){
+    margin-left: 0.5em;
+}
+
+.location{
+    margin-bottom: 1em;
+    font-size: 14px;
+}
+
+.top{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.bottom{
+    position: absolute;
+}
+
+
+@media (max-width:375px) {
+    body{
+        background-position: fixed;
+        background-image: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+        background-repeat: no-repeat;
+        background-size: 140%;
+        background-position: -90vw -50vh, 47vw 54vh;
+    }
+}
